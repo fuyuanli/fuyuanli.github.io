@@ -13,17 +13,25 @@
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
   <![endif]-->
+  <style>
+	@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+	body{
+		font-family: 'Noto Sans TC';
+	}
+	.reveal section img {
+		border:0px;
+	}
+	
+  </style>
 </head>
 
 <body>
-  <!-- 使用 reveal 與 slides 的 div 將整個簡報包起來 -->
+
   <div class="reveal">
     <div class="slides">
 
-      <!-- 簡報內容開始 -->
 
-      <!-- 一個 section 表示一頁簡報 -->
-      <section>
+      <section id="home">
         <h3>卑南遺址</h3>
 		
 		<img src="imgs/title.jpg" height="400px">
@@ -32,33 +40,103 @@
 		
       </section>
 
-      <!-- 第二頁簡報 -->
-      <section id="show-a-link">
-        <h3>卑南遺址</h3>
-        <p>地點：臺東市南王里，東南距臺東市中心約5、6公里</a></p>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117691.26191373864!2d121.07510333018398!3d22.807949683644885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346fba2faba9fd0b%3A0xbc2f24dc94b459ca!2z5Y2R5Y2X5paH5YyW5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1458565958394" width="800" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </section>
 
-      <!-- 第三頁簡報 -->
-      <section>
-        <h2>這是程式碼</h2>
-        <pre><code class="hljs cpp" data-trim contenteditable>
-#include &lt;iostream&gt;
-#define IABS(x) ((x) &lt; 0 ? -(x) : (x))
+    <section id="address">
+        <h3>位置</h3>
+        <p>臺東市南王里，東南距臺東市中心約5、6公里</a></p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d58867.40759227914!2d121.06512952531929!3d22.757476232985407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d22.7357421!2d121.0650357!4m5!1s0x346fba2faba9fd0b%3A0xbc2f24dc94b459ca!2zOTUw5Y-w54Gj5Y-w5p2x57ij5Y-w5p2x5biC5paH5YyW5YWs5ZyS6LevMjAw6Jmf5Y2R5Y2X5paH5YyW5YWs5ZyS!3m2!1d22.794223799999997!2d121.1164398!5e0!3m2!1szh-TW!2stw!4v1458567310478" width="800" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+	</section>
 
-int main(int argc, char *argv[]) {
+	  
+	<section id="history">
+		<h3>歷史</h3>
+		<ul>
+			<li>距今約<b style="color:red;">五千三百年前</b></li>
+			<li>已有<b style="color:red;">新石器時代</b>的人類在此生活</li>
+			<li>3500至2300 年前，出現繁盛的卑南文化人活動，發展出穩定的<b style="color:red;">農漁獵聚落</b></li>
+			<li>卑南文化人開採附近的板岩、西瓜石、玉石等礦材，作為建築、製造裝飾品的原料</li>
+			<li>陶器技術發達，器型優美，變化豐富</li>
+			<li>因資源用罄、部落戰爭、天災或流行疾病，約二千年前，經風化成為廢墟，久而長埋地底，只遺留豎立地面的石柱群</li>
+		</ul>
+		
+	</section>
+	
+	<section>
+		<h3>發現</h3>
+		<ul>
+			<li>卑南遺址最早的考古紀錄是由日治初期的日本籍人類學者　<u>鳥居龍藏</u>所開始，他曾為卑南遺址的石柱拍攝兩幀照片，其拍攝時間可能約在1896年。</li>
+			<br>
+			<li>在　<u>鹿野忠雄</u>1930年發表的文章中曾敘述在卑南遺址所在處有數不清的板岩石柱豎立於地表上。</li>
+			<br>
+			<li>1945年時，　<u>金關丈夫</u>和　<u>國分直一</u>首次對最大立石的周圍開始進行試掘，並發現埋藏於遺跡地底的陶器以及住屋遺跡。</li>
+			<br>
+			<li>1980年，南迴鐵路卑南車站（即今臺東車站）開工，將地下沉睡數千年的遺構、遺物大量揭露，並造成<b style="color:red;">嚴重破壞</b>。</li>
+		</ul>
 
-  /* An annoying &quot;Hello World&quot; example */
-  for (auto i = 0; i &lt; 0xFFFF; i++)
-    cout &lt;&lt; &quot;Hello, World!&quot; &lt;&lt; endl;
-
-  return -2e3 + 12l;
-}
-        </code></pre>
-      </section>
-
-      <!-- 簡報內容結束 -->
-
+</p>
+	
+	</section>
+	
+	<section>
+		<h3>發現</h3>
+		<ul>
+			<li>發掘面積、出土石棺及遺物數量皆是台灣考古史的空前紀錄，大量精美玉器重現於世。建築物成排分布，已經是頗具組織的社會結構。</li>
+			<br>
+			<li>家屋主體以板岩石板、大漂石為牆基，木材為柱，屋牆、屋頂葺以竹架、茅草。屋前以石板舖成方形前庭，屋後有橢圓形砌石圈，用來儲存食物及大陶罐。聚落中有零星分布的高架榖倉，支柱上配有防鼠板。</li>
+		</ul>
+	
+	</section>
+	
+	<section>
+		<h3>發現</h3>
+		<ul>
+			<li>數以千計的石板棺埋在卑南遺址的建築物底部，成帶狀分布，而且與地上建築物的座向相同，顯然意義非比尋常。</li>
+			<br>
+			<li>卑南遺址也發現了被獵頭的無頭遺骸，很可能是因為族群擴張領域、爭奪自然資源，開始出現部落間的爭戰。</li>
+			<br>
+		</ul>
+	
+	</section>
+	
+	<section>
+		<h3>石板棺</h3>
+		<ul style="line-">
+			<li>多而密集，建築物、墓群的分布沿著北北東—南南西方向，墓葬的位置在建築物的正下方，可能有室內葬的風俗</li>
+			<center><img src="imgs/01.jpg" height="400px"></center>		
+		</ul>
+		
+	</section>
+	
+	<section>
+		<h3>玉器</h3>
+		<ul>
+			<li>具有特殊的材質、形狀，從選取之材到雕琢成形，且造型變化豐富，表現出卑南文化人高超的藝術水準及工藝技術</li>	
+		<center><img src="imgs/02.jpg" height="400px"></center>
+		</ul>
+	</section>
+	<section>
+		<h3>陶器</h3>
+		<ul>
+			<li>大多沒有紋飾，在陶紡輪、陶環及陶蓋上偶爾有紋飾出現。，品質普通，數量很多，種類多樣。陶器主要有罐、缽、瓶、盆、勺、杯，其他還有陶紡輪、陶蓋、陶環、陶槌、陶偶等。</li>
+			<center><img src="imgs/03.jpg" height="400px"></center>
+		</ul>
+		
+	</section>
+	<section>
+		<h3>陪葬陶罐</h3>
+		<ul>
+			<li>放於棺內死者臉側，也有在棺外頭部兩側或頭頂的。陪葬陶罐主要有兩種：「雙豎把圈足罐」，數量較多；「單豎把帶流無足罐」，數量較少。陪葬陶罐和日常使用的陶罐外表有很大的區別，表示日常與儀式用陶器的差異。</li>
+			<center><img src="imgs/04.jpg" height="400px"></center>
+		</ul>
+	</section>
+	
+	<section>
+		<h2>報告結束</h2>
+		<p>謝謝大家</p>
+		<p style="font-size:30px">資料來源：維基百科、Google</p>
+		
+	</section>
+      
       </div>
   </div>
   <script src="lib/js/head.min.js"></script>
