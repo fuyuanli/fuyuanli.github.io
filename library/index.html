@@ -4,35 +4,38 @@
         <script src="jquery.min.js"></script>
         <script>
 
-$.ajax({
-  url: "books.json",
-  type: "GET",
-  dataType: "json",
-  success: function(Jdata) {
-      alert("SUCCESS!!!");
-    },
-  
-  error: function() {
-      alert("ERROR!!!");
-    }
-});
-/*
-        $.getJSON( "books.json", function( data ) {
-          var items = [];
-          $.each( data, function( key, val ) {
-              items.push( "<li id='" + key + "'>" + val + "</li>" );
-            });
-         
-          $( "<ul/>", {
-              "class": "my-new-list",
-              html: items.join( "" )
-            }).appendTo( "body" );
-        });
-*/
+        function booksLoop(JData){
+            var str = "";
+            for (var i = 0; i < JData.length ; i++){
+                //console.log(data[i]["book_name"]);
+                str += "<tr>";
+                str += "<td>"+JData[i]["book_name"]+"</td>";
+                str += "<td>"+JData[i]["book_writer"]+"</td>";
+                str += "<td>"+JData[i]["book_press"]+"</td>";
+                str += "<td>"+JData[i]["book_number"]+"</td>";
+                str += "</tr>";
+            }
+            return str;
+        
+        }
+        $.ajax({
+            url: "books.json",
+            type: "GET", //type:"GET"
+            dataType: "JSON",
+            success: function(data){
+                //console.log(data);
+                //console.log(data.length);
+                str = booksLoop(data);
+                $("#books").html(str);
+            }
+        })
+
         </script>
     </head>
     <body>
-
+        <div id="books">
+    
+        </div>
     </body>
 </html>
 
