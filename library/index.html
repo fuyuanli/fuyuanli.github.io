@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="jquery.min.js"></script>
+        <title>臺東大學系圖藏書</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
 
         function booksLoop(JData){
@@ -15,9 +20,22 @@
                 str += "<td>"+JData[i]["book_number"]+"</td>";
                 str += "</tr>";
             }
-            return str;
-        
+            return str; 
         }
+
+        function theDom(data){
+            str = "<thead><tr>";
+            str += "<th>書名</th>";
+            str += "<th>作者</th>";
+            str += "<th>出版社</th>";
+            str += "<th>編號</th>";
+            str += "</tr></thead>";
+            str += "<tbody>";
+            str += booksLoop(data);
+            str += "</tbody>";
+            return str;
+        }
+
         $.ajax({
             url: "books.json",
             type: "GET", //type:"GET"
@@ -25,16 +43,22 @@
             success: function(data){
                 //console.log(data);
                 //console.log(data.length);
-                str = booksLoop(data);
-                $("#books").html(str);
-            }
+                
+                str = theDom(data);
+                //$("#books").html(str);
+                document.getElementById('database').innerHTML = str;
+           }
         })
 
         </script>
     </head>
     <body>
-        <div id="books">
-    
+        <div class="container">
+            <h2>臺東大學資訊工程學系圖書館</h2>
+            <p>系圖查詢系統</p>
+            <table id="database" class="table table-striped">
+
+            </table>
         </div>
     </body>
 </html>
