@@ -1,6 +1,6 @@
 #!/bin/bash
 # Am I root?
-urlBase='http://fuyuanli.github.io/embedded'
+urlBase='http://fuyuanli.github.io/embadded'
 userName=`whoami`
 echo "歡迎使用 嵌入式系統 環境建置程式 by fuyuanli"
 cd "/home/$userName"
