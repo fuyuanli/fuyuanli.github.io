@@ -10,6 +10,7 @@ sudo mv "/etc/apt/sources.list" "/etc/apt/sources.list.bak"
 sudo wget "$urlBase/sources.list" -O "/etc/apt/sources.list"
 sudo apt-get update
 sudo apt-get install vim patch libncurses5-dev uboot-mkimage -y
+sudo rm -rf "/home/$userName/microtime"
 
 cd /
 echo "目前目錄為 `pwd`"
