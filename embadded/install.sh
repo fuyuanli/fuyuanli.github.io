@@ -28,7 +28,7 @@ sudo tar -zxvf "mt-linux-2.6.15.3.tar.gz"
 cd "/home/$userName/microtime/pro/devkit/lsp/create-pxa270"
 echo "目前目錄為 `pwd`"
 sudo wget "$urlBase/linux-2.6.15.3-creator-pxa270.patch"
-patch -p0 < "linux-2.6.15.3-creator-pxa270.patch"
+sudo patch -p0 < "linux-2.6.15.3-creator-pxa270.patch"
 
 cd "/home/$userName/microtime"
 echo "目前目錄為 `pwd`"
@@ -38,6 +38,7 @@ cd "/home/$userName"
 echo "目前目錄為 `pwd`"
 wget "$urlBase/rootfs.tar.gz"
 sudo tar -zxvf "rootfs.tar.gz"
+sudo chown $userName:$userName microtime/ -R
 echo  "執行完畢，自動啟動新的命令列視窗"
 echo  "＝＝＝＝＝請關閉此視窗＝＝＝＝＝"
 gnome-terminal
