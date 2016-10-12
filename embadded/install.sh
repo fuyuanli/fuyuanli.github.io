@@ -27,7 +27,7 @@ sudo tar -zxvf "mt-linux-2.6.15.3.tar.gz"
 
 cd "/home/$userName/microtime/pro/devkit/lsp/create-pxa270"
 echo "目前目錄為 `pwd`"
-sudo get "$urlBase/linux-2.6.15.3-creator-pxa270.patch"
+sudo wget "$urlBase/linux-2.6.15.3-creator-pxa270.patch"
 patch -p0 < "linux-2.6.15.3-creator-pxa270.patch"
 
 cd "/home/$userName/microtime"
