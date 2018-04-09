@@ -1,6 +1,6 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @import url(font-awesome.min.css);
-@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 
 /*
 	Identity by HTML5 UP
@@ -127,12 +127,14 @@
 
 	body, input, select, textarea {
 		color: #414f57;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 14pt;
-		font-weight: 300;
+		font-family: "Noto Sans TC", Helvetica, sans-serif;
+		font-size: 16px;
 		line-height: 2;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
+		letter-spacing: 0.2em;        
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-smooth: always;
+		/* text-transform: uppercase; */
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -157,7 +159,7 @@
 		-webkit-transition: color 0.2s ease, border-color 0.2s ease;
 		-ms-transition: color 0.2s ease, border-color 0.2s ease;
 		transition: color 0.2s ease, border-color 0.2s ease;
-		color: inherit;
+		color: #FF9966;
 		text-decoration: none;
 	}
 
@@ -196,17 +198,16 @@
 		}
 
 	h1 {
-		font-size: 1.85em;
-		letter-spacing: 0.22em;
+		font-size: 1.9em;
 		margin: 0 0 0.525em 0;
 	}
 
 	h2 {
-		font-size: 1.25em;
+		font-size: 1.6em;
 	}
 
 	h3 {
-		font-size: 1em;
+		font-size: 1.2em;
 	}
 
 	h4 {
@@ -709,7 +710,7 @@
 		border-radius: 4px;
 		cursor: default;
 		opacity: 0.95;
-		text-align: center;
+		/* text-align: center; */
 		-moz-transform-origin: 50% 50%;
 		-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
@@ -722,6 +723,8 @@
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
+        
+        width: 800px;
 	}
 
 		#main .avatar {
